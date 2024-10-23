@@ -2,6 +2,6 @@
 
 const char *ssid = "ssid";
 const char *password = "password";
-Packet *pkt = nullptr;
+Packet pkt = {0};
 QueueHandle_t udpQueue;
 AsyncUDP udp;

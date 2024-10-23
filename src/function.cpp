@@ -43,7 +43,31 @@ void startmDNS() {
   }
 }
 
-void startJoystick(IPAddress ip) {
+void stopJoystick(IPAddress ip) {
+  HTTPClient http;
+
+  String url = "http://" + ip.toString() + "/udpcontrol?action=joystick_end";
+  http.begin(url);
+
+  http.addHeader("Content-Type", "application/json");
+
+  String payload = "";
+
+  int httpResponseCode = http.POST(payload);
+
+  if (httpResponseCode > 0) {
+    String response = http.getString();
+    Serial.println("HTTP Response code (End): " + String(httpResponseCode));
+    Serial.println("Response (End): " + response);
+  } else {
+    Serial.println("Error on sending POST (End): " + String(httpResponseCode));
+  }
+
+  http.end();
+}
+
+void startJoystick(IPAddress ip, int channels) {
+  stopJoystick(ip);
   HTTPClient http;
 
   String url = "http://" + ip.toString() +
@@ -67,10 +91,9 @@ void startJoystick(IPAddress ip) {
   http.end();
 }
 
-void startAsyncUDPServer(IPAddress ip, uint16_t port) {
-  if (udp.listen(ip, port)) {
-    Serial.printf("Async UDP server started on IP: %s, Port: %d\n",
-                  ip.toString().c_str(), port);
+void startAsyncUDPServer(uint16_t port) {
+  if (udp.listen(port)) {
+    Serial.print("Async UDP server started");
 
     udp.onPacket(handleUDPPacket);
   } else {
@@ -78,16 +101,12 @@ void startAsyncUDPServer(IPAddress ip, uint16_t port) {
   }
 }
 
-Packet *createPacket(uint8_t headerValue, uint8_t channelValue) {
-  Packet *pkt =
-      (Packet *)malloc(sizeof(Packet) + sizeof(uint16_t) * channelValue);
-  pkt->header = headerValue;
-  pkt->channel = channelValue;
+Packet *createPacket(size_t size) {
+  Packet *pkt = (Packet *)malloc(size);
   return pkt;
 }
 
 void handleUDPPacket(AsyncUDPPacket packet) {
   uint8_t *data = packet.data();
-  Serial.println("checking");
   xQueueSend(udpQueue, data, portMAX_DELAY);
 }

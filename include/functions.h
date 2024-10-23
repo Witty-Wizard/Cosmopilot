@@ -8,9 +8,10 @@
 
 void startWiFi();
 void startmDNS();
-void startJoystick(IPAddress ip);
-void startAsyncUDPServer(IPAddress ip, uint16_t port);
+void startJoystick(IPAddress ip, int channels = 8);
+void startAsyncUDPServer(uint16_t port);
 void handleUDPPacket(AsyncUDPPacket packet);
-Packet *createPacket(uint8_t headerValue, uint8_t channelValue);
+void stopJoystick(IPAddress ip);
+Packet *createPacket(uint8_t channelValue = 18);
 
 #endif
