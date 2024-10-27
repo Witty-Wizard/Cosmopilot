@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/Witty-Wizard/UDP-Reciever" alt="GitHub Release">
-  <img src="https://img.shields.io/github/license/Witty-Wizard/UDP-Reciever" alt="GitHub License">
-  <img src="https://img.shields.io/github/stars/Witty-Wizard/UDP-Reciever?style=flat" alt="GitHub Repo stars">
-  <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Witty-Wizard/UDP-Reciever">
-  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Witty-Wizard/UDP-Reciever?style=flat">
+  <img src="https://img.shields.io/github/v/release/Cosmo-Pilot/Cosmopilot" alt="GitHub Release">
+  <img src="https://img.shields.io/github/license/Cosmo-Pilot/Cosmopilot" alt="GitHub License">
+  <img src="https://img.shields.io/github/stars/Cosmo-Pilot/Cosmopilot?style=flat" alt="GitHub Repo stars">
+  <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Cosmo-Pilot/Cosmopilot">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Cosmo-Pilot/Cosmopilot?style=flat">
 </p>
 
 # UDP Joystick Control
