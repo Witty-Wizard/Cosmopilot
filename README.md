@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/Witty-Wizard/Cosmopilot" alt="GitHub Release">
-  <img src="https://img.shields.io/github/license/Witty-Wizard/Cosmopilot" alt="GitHub License">
-  <img src="https://img.shields.io/github/stars/Witty-Wizard/Cosmopilot?style=flat" alt="GitHub Repo stars">
-  <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Witty-Wizard/Cosmopilot">
-  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Witty-Wizard/Cosmopilot?style=flat">
+  <img src="https://img.shields.io/github/v/release/CosmopilotHQ/Cosmopilot" alt="GitHub Release">
+  <img src="https://img.shields.io/github/license/CosmopilotHQ/Cosmopilot" alt="GitHub License">
+  <img src="https://img.shields.io/github/stars/CosmopilotHQ/Cosmopilot?style=flat" alt="GitHub Repo stars">
+  <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/CosmopilotHQ/Cosmopilot">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/CosmopilotHQ/Cosmopilot?style=flat">
 </p>
 
 # UDP Joystick Control
